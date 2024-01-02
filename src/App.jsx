@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Importuj swoje komponenty, np. Home, Product, Cart, itp.
+import StronaGlowa from "./StronaGlowna.jsx";
+import Product from './Produkty/Krem.jsx';
+//import Cart from './Cart';
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => {
+    return (
+        <Router>
+            <div>
+                {/* Dodaj nawigację, np. w nagłówku */}
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        {/* Dodaj więcej linków według potrzeb */}
+                    </ul>
+                </nav>
 
-export default App
+                {/* Dodaj Switch, aby zapewnić, że tylko jedna trasa jest renderowana jednocześnie */}
+                <Switch>
+                    <Route path="/" exact component={StronaGlowa} />
+                    <Route path="/product/:id" component={Product} />
+                    {/* Dodaj więcej tras, np. dla koszyka */}
+                </Switch>
+            </div>
+        </Router>
+    );
+};
+
+export default App;
