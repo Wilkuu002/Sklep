@@ -1,9 +1,10 @@
+// StronaGlowa.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useProductContext } from './ProductContext.jsx';
 
 const StronaGlowa = () => {
-    // Pobierz listę produktów, np. z kontekstu lub komponentu nadrzędnego
-    const products = [...];
+    const { products } = useProductContext();
 
     return (
         <div>
@@ -11,7 +12,6 @@ const StronaGlowa = () => {
             <ul>
                 {products.map(product => (
                     <li key={product.id}>
-                        {/* Użyj Link do stworzenia linku do pojedynczego produktu */}
                         <Link to={`/product/${product.id}`}>
                             {product.name}
                         </Link>
