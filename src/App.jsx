@@ -1,22 +1,16 @@
-// App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ProductProvider } from './Komponenty/ProductContext.jsx';
-import StronaGlowa from './Komponenty/StronaGlowna.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import StronaGlowna from './Strony/StronaGlowna.jsx';
 
-const App = () => {
+function App() {
     return (
         <Router>
-            <ProductProvider>
-                <div>
-                    {/* Dodaj nagłówek, nawigację itp., jeśli to konieczne */}
-                    <Switch>
-                        <Route path="/" exact component={StronaGlowa} />
-                    </Switch>
-                </div>
-            </ProductProvider>
+            <Routes>
+                <Route path="/" element={<StronaGlowna />} />
+                {/* Dodaj inne trasy, jeśli są potrzebne */}
+            </Routes>
         </Router>
     );
-};
+}
 
 export default App;
