@@ -3,27 +3,32 @@
     {
       "id": 1,
       "name": "Produkt 1",
-      "price": 19
+      "price": 19,
+      "bestseller": true
     },
     {
       "id": 2,
       "name": "Produkt 2",
-      "price": 29
+      "price": 29,
+      "bestseller": true
     },
     {
       "id": 3,
       "name": "Produkt 3",
-      "price": 29
+      "price": 29,
+      "bestseller": true
     },
     {
       "id": 4,
       "name": "Produkt 4",
-      "price": 29
+      "price": 29,
+      "bestseller": false
     },
     {
       "id": 5,
       "name": "Produkt 5",
-      "price": 29
+      "price": 29,
+      "bestseller": false
     }
   ]
 }

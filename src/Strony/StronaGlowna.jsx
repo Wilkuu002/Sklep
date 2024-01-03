@@ -27,17 +27,21 @@ const StronaGlowna = () => {
         <div>
             <h2>Lista Produktów</h2>
             <div className="product-list">
-                {products.map(product => (
-                    <div key={product.id} className="product-item">
-                        <Link to={`/product/${product.id}`}>
-                            <h3>{product.name}</h3>
-                        </Link>
-                        <p>Cena: ${product.price}</p>
-                    </div>
-                ))}
+                {products
+                    .filter((product) => product.bestseller === true)
+                    .map((product) => (
+                        <div key={product.id} className="product-item">
+                            <Link to={`/product/${product.id}`}>
+                                <h3>{product.name}</h3>
+                            </Link>
+                            <p>Cena: ${product.price}</p>
+                        </div>
+                    ))}
             </div>
         </div>
     );
+
+
 };
 
 export default StronaGlowna;
