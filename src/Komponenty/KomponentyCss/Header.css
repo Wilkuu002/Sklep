@@ -1,0 +1,28 @@
+.Menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin:auto;
+    background-color: #a6843f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #282828;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+    border-radius: 10px;
+    min-width: 30vh;
+}
+
+.button:hover {
+    background-color: #8eff6e;
+}
