@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-
+import './StronyCSS/StronaBlogCss.css'
 const StronaBlog = ()=>{
     const [blogs, setBlogs] = useState([]);
     const [currentBlogIndex, setCurrentBlogIndex] = useState(0);

@@ -29,7 +29,7 @@ const StronaKoszyk = () => {
                 ))}
             </ul>
             <p>Łączna kwota zakupów: ${koszyk.reduce((sum, produkt) => sum + produkt.price, 0)}</p>
-            <button onClick={handleZaplacClick}>Zapłać</button>
+            <button className="btn btn-custom" onClick={handleZaplacClick}>Zapłać</button>
         </div>
     );
 };

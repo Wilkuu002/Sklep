@@ -35,7 +35,7 @@ const Produkt = ({ bestsellerOnly }) => {
                             <h3>{product.name}</h3>
                         </Link>
                         <p>Cena: ${product.price}</p>
-                        <button onClick={()=>dodajDoKoszyka(product)}>Dodaj do koszyka</button>
+                        <button className='btn btn-custom' onClick={()=>dodajDoKoszyka(product)}>Dodaj do koszyka</button>
                     </div>
                 ))}
             </div>

@@ -4,13 +4,12 @@
     left: 0;
     width: 100%;
     margin:auto;
-    background-color: #a6843f;
+    background-color: #545250;
     color: white;
     padding: 10px;
     text-align: center;
     z-index: 1000;
 }
-
 .button {
     margin: 0 10px;
     padding: 5px 10px;
@@ -22,7 +21,12 @@
     border-radius: 10px;
     min-width: 30vh;
 }
+.btn-custom {
+    background-color: #4CAF50;
+    color: black;
+    margin-right: 10px;
 
-.button:hover {
-    background-color: #8eff6e;
+}
+.btn-custom:hover{
+    background-color: #45a049;
 }

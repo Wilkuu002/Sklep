@@ -1,0 +1,25 @@
+.Blog {
+    background-color: #ffffff;
+    border: 1px solid #00ff00;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.BlogText {
+    color: #000000;
+}
+
+button {
+    background-color: #00ff00;
+    color: #868686;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #545250;
+    border-color: rgba(84,82,80,0.8);
+}
