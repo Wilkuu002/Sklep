@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useKoszyk } from "./Koszyk.jsx";
 
 const Produkt = ({ bestsellerOnly }) => {
     const [products, setProducts] = useState([]);
+    const { dodajDoKoszyka } = useKoszyk();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -12,7 +14,6 @@ const Produkt = ({ bestsellerOnly }) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-
                 const data = await response.json();
                 setProducts(data.products);
             } catch (error) {
@@ -27,7 +28,6 @@ const Produkt = ({ bestsellerOnly }) => {
 
     return (
         <div>
-            <h2 className="Naglowki">Lista Bestsellerów</h2>
             <div className="product-list">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product-item">
@@ -35,6 +35,7 @@ const Produkt = ({ bestsellerOnly }) => {
                             <h3>{product.name}</h3>
                         </Link>
                         <p>Cena: ${product.price}</p>
+                        <button onClick={()=>dodajDoKoszyka(product)}>Dodaj do koszyka</button>
                     </div>
                 ))}
             </div>
