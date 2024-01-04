@@ -6,7 +6,7 @@ const StronaGlowna = () => {
 
     return (
         <div>
-            <Produkt products={bestsellers} />
+            <Produkt bestsellerOnly={true} />
         </div>
     );
 };
