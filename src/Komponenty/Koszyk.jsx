@@ -12,11 +12,15 @@ export const KoszykProvider = ({ children }) => {
     const usunZKoszyka = (produktId) => {
         setKoszyk((prevKoszyk) => prevKoszyk.filter((produkt) => produkt.id !== produktId));
     };
+    const wyczyscKoszyk = () => {
+        setKoszyk([]);
+    };
 
     const wartoscKoszyka = {
         koszyk,
         dodajDoKoszyka,
         usunZKoszyka,
+        wyczyscKoszyk
     };
 
     return <KoszykContext.Provider value={wartoscKoszyka}>{children}</KoszykContext.Provider>;
