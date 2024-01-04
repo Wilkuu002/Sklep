@@ -30,5 +30,18 @@
       "price": 29,
       "bestseller": false
     }
+  ],
+
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Blog 1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis arcu ante, ac pretium erat interdum in. Nunc accumsan egestas quam sit amet tincidunt. Sed et nisi ut ex viverra vulputate sed id nisi. Praesent vitae sem et sem dapibus egestas. Duis lacus velit, scelerisque at lorem ut, blandit pharetra orci. Suspendisse vestibulum sem eget velit vehicula gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tellus erat, interdum sed ultricies vel, gravida nec ex. Fusce volutpat mattis tortor, a lobortis felis. Suspendisse eget nulla gravida, tempus odio vel, rhoncus nisl. Praesent id sodales est. Nulla sed lobortis justo. Duis consectetur imperdiet imperdiet. Integer varius, nisl eu consequat fermentum, tortor dolor pharetra diam, at aliquam nisl metus eu leo."
+    },
+    {
+      "id": 2,
+      "title": "Blog 1",
+      "text": "habla habla hys"
+      }
   ]
 }
