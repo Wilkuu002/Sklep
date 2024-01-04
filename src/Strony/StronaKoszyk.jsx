@@ -1,7 +1,9 @@
 
 import React from "react";
+import {useKoszyk} from "../Komponenty/Koszyk.jsx";
 
-const StronaKoszyk = ({ koszyk }) => {
+const StronaKoszyk = () => {
+    const {koszyk} = useKoszyk()
     return (
         <div>
             <h2>Twój Koszyk</h2>
