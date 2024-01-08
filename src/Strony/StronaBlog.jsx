@@ -1,8 +1,11 @@
 import {useEffect, useState} from "react";
 import './StronyCSS/StronaBlogCss.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from "react-bootstrap"
 const StronaBlog = ()=>{
     const [blogs, setBlogs] = useState([]);
     const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -27,14 +30,18 @@ const StronaBlog = ()=>{
         setCurrentBlogIndex((prevIndex) => (prevIndex - 1 + blogs.length) % blogs.length);
     };
     return (
-        <div>
+        <div className="container mt-4">
             {blogs.length > 0 && (
                 <div>
-                    <div className="Blog">
-                        <p className="BlogText">{blogs[currentBlogIndex].text}</p>
+                    <div className="row">
+                        <div className="col-md-8 mx-auto">
+                            <div className="Blog">
+                                <p className="BlogText">{blogs[currentBlogIndex].text}</p>
+                            </div>
+                            <Button variant="primary" onClick={handlePrevBlog} className="mr-2">Poprzedni</Button>
+                            <Button variant="primary" onClick={handleNextBlog}>Następny</Button>
+                        </div>
                     </div>
-                    <button onClick={handlePrevBlog}>Poprzedni</button>
-                    <button onClick={handleNextBlog}>Następny</button>
                 </div>
             )}
         </div>

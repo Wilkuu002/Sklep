@@ -1,4 +1,4 @@
-import Produkt from "../Komponenty/Produkt.jsx";
+import ProduktyLista from "../Komponenty/ProduktyLista.jsx";
 import React from "react";
 
 const StronaSklep = ()=>{
@@ -6,7 +6,7 @@ const StronaSklep = ()=>{
         <div>
             <h2 className="Naglowki">Sklep</h2>
             <h2 className="Naglowki">Lista Produktów</h2>
-            <Produkt bestsellerOnly={false}/>
+            <ProduktyLista bestsellerOnly={false}/>
         </div>
     )
 }
