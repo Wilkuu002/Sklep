@@ -31,7 +31,7 @@ const ProduktyLista = ({ bestsellerOnly }) => {
             <div className="product-list">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product-item">
-                        <Link to={`/produkt/${product.id}`}>
+                        <Link to={`/StronaProduktu/${product.id}`}>
                             <h3>{product.name}</h3>
                         </Link>
                         <p>Cena: ${product.price}</p>
