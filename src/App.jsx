@@ -6,6 +6,7 @@ import StronaSklep from "./Strony/StronaSklep.jsx";
 import StronaKoszyk from "./Strony/StronaKoszyk.jsx";
 import {KoszykProvider} from "./Komponenty/Koszyk.jsx";
 import StronaProduktu from "./Strony/StronaProduktu.jsx";
+import StronaFAQ from "./Strony/StronaFAQ.jsx";
 
 
 
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/" element={<StronaGlowna />} />
                         <Route path="/StronaSklep" element={<StronaSklep />} />
                         <Route path="/StronaKoszyk" element={<StronaKoszyk />} />
+                        <Route path="/StronaFAQ" element={<StronaFAQ/>}/>
                         <Route path="/StronaProduktu/:id" element={<StronaProduktu/>} />
 
                     </Routes>
