@@ -4,9 +4,11 @@ const KoszykContext = createContext();
 
 export const KoszykProvider = ({ children }) => {
     const [koszyk, setKoszyk] = useState([]);
+    const [licznikId, setLicznikId] = useState(1);
 
     const dodajDoKoszyka = (produkt) => {
-        setKoszyk((prevKoszyk) => [...prevKoszyk, produkt]);
+        setKoszyk((prevKoszyk) => [...prevKoszyk, { ...produkt, id: licznikId }]);
+        setLicznikId((prevLicznikId) => prevLicznikId + 1);
     };
 
     const usunZKoszyka = (produktId) => {
