@@ -13,13 +13,13 @@ const StronaKoszyk = () => {
                 }
             });
         } else {
-            console.error('Przeglądarka nie obsługuje powiadomień.');
+            console.error('Przegladarka nie obsługuje powiadomień.');
         }
     };
 
     const handleZaplacClick = () => {
         wyczyscKoszyk();
-        showNotification("Dziękujemy za zakupy! 😊");
+        showNotification("Dziękujemy za zakupy! 😊, koszyk został wyczyszczony");
     };
 
     const handleUsunClick = (produktId) => {
@@ -28,26 +28,21 @@ const StronaKoszyk = () => {
 
     return (
         <div className="container mt-5">
-            <h2>Twój Koszyk</h2>
+            <h2>Twój Koszyk </h2>
+            <div>
             <ul className="list-group">
                 {koszyk.map((produkt) => (
                     <li key={produkt.id} className="list-group-item d-flex justify-content-between align-items-center">
-                        <span>{produkt.name} - Cena: ${produkt.price}</span>
-                        <button
-                            className="btn btn-sm btn-danger"
-                            onClick={() => handleUsunClick(produkt.id)}
-                        >
-                            Usuń
-                        </button>
+                        <span>{produkt.name} - Cena: ${produkt.price} </span>
+                        <button className="btn btn-sm btn-danger" onClick={() => handleUsunClick(produkt.id)}>Usuń</button>
                     </li>
                 ))}
             </ul>
+            </div>
             <p className="mt-3">
                 Łączna kwota zakupów: ${koszyk.reduce((sum, produkt) => sum + produkt.price, 0)}
             </p>
-            <button className="btn btn-custom" onClick={handleZaplacClick}>
-                Zapłać
-            </button>
+            <button className="btn btn-custom" onClick={handleZaplacClick}>Zapłać</button>
         </div>
     );
 };

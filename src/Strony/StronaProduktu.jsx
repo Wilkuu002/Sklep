@@ -11,7 +11,7 @@ const StronaProduktu = () => {
             try {
                 const response = await fetch(`http://localhost:3001/products?id=${id}`);
                 if (!response.ok) {
-                    throw new Error('Błąd sieci');
+                    throw new Error('nie dziala respons Strona Produktu');
                 }
                 const data = await response.json();
                 setProduct(data.find((product) => product.id === Number(id)));
