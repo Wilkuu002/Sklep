@@ -46,5 +46,4 @@ const StronaKoszyk = () => {
         </div>
     );
 };
-
 export default StronaKoszyk;
