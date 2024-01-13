@@ -16,7 +16,7 @@ const StronaProduktu = () => {
                 const data = await response.json();
                 setProduct(data.find((product) => product.id === Number(id)));
             } catch (error) {
-                console.error('Błąd fetchowania produktu:', error.message);
+                console.error('Błąd fetchowania Strona Produktu :', error.message);
             }
         };
 

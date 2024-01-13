@@ -13,12 +13,12 @@ const ProduktyLista = ({ bestsellerOnly }) => {
             try {
                 const response = await fetch(`http://localhost:3001/products`);
                 if (!response.ok) {
-                    throw new Error('blad sieci');
+                    throw new Error('blad pobierania Produkty Lista');
                 }
                 const data = await response.json();
                 setProducts(data);
             } catch (error) {
-                console.error('Blad fetchowania produktow  :', error.message);
+                console.error('Blad fetchowania produktow lista :', error.message);
             }
         };
 
